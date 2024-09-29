@@ -28,23 +28,18 @@ The result of the analysis using each model is the extraction of a metrics table
 
 - **NRMSE (Normalized Root Mean Squared Error):**
   - A measure that evaluates the accuracy of a time series prediction model by comparing the square root of the mean squared error with the standard deviation of the data.
-  - Formula: $ NRMSE = \frac{RMSE}{\text{Standard deviation of the data}} $
 
 - **RMSE (Root Mean Squared Error):**
   - A metric that calculates the square root of the average squared difference between predicted values and actual values of the time series.
-  - Formula: $ RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2} $
 
 - **MSE (Mean Squared Error):**
   - Represents the average of the squares of the errors between the model predictions and the actual values of the time series.
-  - Formula: $ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 $
 
 - **MAPE (Mean Absolute Percentage Error):**
   - A measure of error that calculates the average of absolute percentage errors between predictions and actual values of the time series.
-  - Formula: $ MAPE = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100\% $
 
 - **MAE (Mean Absolute Error):**
   - The average of the absolute values of the errors between model predictions and actual values of the time series.
-  - Formula: $ MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i| $
 
 These metrics will be used to evaluate the accuracy and performance of the time series prediction models in this exercise, leading to conclusions at the end of the document. 
  
@@ -64,18 +59,6 @@ The method is based on three equations that are updated iteratively with each ne
 1. Simple exponential smoothing to eliminate random fluctuations
 2. Double exponential smoothing to model trends 
 3. Triple exponential smoothing to model seasonality
-
-**Basic formulas:**
-
-- Level: $ l_t = \alpha \frac{y_t}{s_{t-p}} + (1-\alpha)(l_{t-1} + b_{t-1}) $
-
-- Trend: $ b_t = \beta (l_t - l_{t-1}) + (1-\beta)b_{t-1} $
-
-- Seasonality: $ s_t = \gamma \frac{y_t}{l_t} + (1-\gamma)s_{t-p} $
-
-- Prediction: $ \hat{y}_{t+h} = (l_t + hb_t) s_{t-p+h} $
-
-where $ \alpha, \beta, \gamma $ are smoothing parameters and $ p $ is the seasonal period.
 
 ---
 
