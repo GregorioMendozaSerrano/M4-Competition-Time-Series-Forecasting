@@ -20,7 +20,7 @@ The six models to be trained and tested in this document are:
 - Holt-Winters Exponential Smoothing
 - Random Forest Regressor
 - Convolutional Neural Network (CNN)
-- Temporal Convolutional Neural Network (TCN)
+- Deeper Convolutional Neural Network (D-CNN)
 - ARIMA (Autoregressive Integrated Moving Average)
 - GRU (Gated Recurrent Unit)  
 
